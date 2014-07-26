@@ -1,5 +1,5 @@
 
-SECTIONS = skills.tex short-experience.tex experience.tex education.tex
+SECTIONS = skills.tex short-experience.tex experience.tex education.tex personal.tex
 
 all: chandler ecu
 
