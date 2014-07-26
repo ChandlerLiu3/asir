@@ -12,3 +12,4 @@ ecu: ecu.tex ecu.objective.tex $(SECTIONS)
 	pdflatex $@
 	epdfview $@.pdf
 	touch $@
+	cp $@.pdf pdf
