@@ -3,7 +3,7 @@ SECTIONS = skills.tex experience.tex education.tex personal.tex trainings.tex
 
 all: chandler ecu web-pm
 
-chandler: chandler.tex Makefile
+chandler: chandler.tex
 	pdflatex $@
 	epdfview chandler.pdf
 	touch $@
