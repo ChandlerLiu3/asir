@@ -1,7 +1,8 @@
 
 SECTIONS = skills.tex experience.tex education.tex personal.tex trainings.tex
 
-all: chandler ecu web-pm
+# all: chandler ecu web-pm
+all: researcher
 
 chandler: chandler.tex
 	pdflatex $@
@@ -20,3 +21,9 @@ web-pm: web-pm.tex web-pm.objective.tex web-pm-experience.tex $(SECTIONS)
 	touch $@
 	cp $@.pdf pdf
 
+
+researcher: researcher.tex researcher.objective.tex researcher-experience.tex $(SECTIONS)
+	pdflatex $@
+	epdfview $@.pdf
+	touch $@
+	cp $@.pdf pdf
