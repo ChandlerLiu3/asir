@@ -6,24 +6,24 @@ all: researcher
 
 chandler: chandler.tex
 	pdflatex $@
-	epdfview chandler.pdf
 	touch $@
+	epdfview $@.pdf
 
 ecu: ecu.tex ecu.objective.tex short-experience.tex $(SECTIONS)
 	pdflatex $@
-	epdfview $@.pdf
 	touch $@
 	cp $@.pdf pdf
+	epdfview $@.pdf
 
 web-pm: web-pm.tex web-pm.objective.tex web-pm-experience.tex $(SECTIONS)
 	pdflatex $@
-	epdfview $@.pdf
 	touch $@
 	cp $@.pdf pdf
+	epdfview $@.pdf
 
 
 researcher: researcher.tex researcher.objective.tex researcher-experience.tex $(SECTIONS)
 	pdflatex $@
-	epdfview $@.pdf
 	touch $@
 	cp $@.pdf pdf
+	epdfview $@.pdf
