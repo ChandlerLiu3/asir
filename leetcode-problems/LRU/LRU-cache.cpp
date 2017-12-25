@@ -98,13 +98,31 @@ int test1()
 int test2()
 {
     LRUCache cache(2);
-    SET(2, 1);
     SET(1, 1);
-    SET(2, 3);
-    SET(4, 1);
-
+    SET(2, 2);
+    GET(1, 1); 
+    SET(3, 3); 
+    GET(2, -1);
+    SET(4, 4); 
     GET(1, -1);
-    GET(2, 3);
+    GET(3, 3); 
+    GET(4, 4); 
+
+    return 0;
+}
+
+int test3()
+{
+    LRUCache cache(3);
+    SET(1, 1);
+    SET(2, 2);
+    GET(1, 1); 
+    SET(3, 3); 
+    GET(2, 2);
+    SET(4, 4); 
+    GET(1, -1);
+    GET(3, 3); 
+    GET(4, 4); 
 
     return 0;
 }
@@ -115,5 +133,7 @@ int main()
 {
     RUN(test1);
     RUN(test2);
+    RUN(test3);
+
     return 0;
 }
