@@ -35,4 +35,4 @@ researcher: researcher.tex researcher.objective.tex researcher-experience.tex $(
 	touch $@
 
 clean:
-	rm -rf chandler ecu web-pm researcher
+	rm -rf chandler ecu web-pm researcher Lead-Product-Expert
