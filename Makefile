@@ -2,7 +2,8 @@
 SECTIONS = skills.tex experience.tex education.tex personal.tex trainings.tex
 
 # all: chandler ecu web-pm
-all: Lead-Product-Expert
+# all: Lead-Product-Expert
+all: BL
 
 chandler: chandler.tex
 	pdflatex $@
@@ -14,6 +15,11 @@ Lead-Product-Expert: Lead-Product-Expert.tex Lead-Product-Expert.objective.tex L
 	cp $@.pdf pdf
 	cp $@.pdf ../downloads
 	touch $@
+
+BL: BL.tex short-experience.tex $(SECTIONS)
+	pdflatex $@
+	cp $@.pdf $@
+	cp $@.pdf ../downloads
 
 ecu: ecu.tex ecu.objective.tex short-experience.tex $(SECTIONS)
 	pdflatex $@
